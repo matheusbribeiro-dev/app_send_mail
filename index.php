@@ -3,7 +3,9 @@
 		<meta charset="utf-8" />
     	<title>App Mail Send</title>
 
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    	<link rel="stylesheet" 
+    		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	</head>
 
@@ -21,20 +23,20 @@
       			<div class="col-md-12">
   				
 					<div class="card-body font-weight-bold">
-						<form>
+						<form action="send_process.php" method="post">
 							<div class="form-group">
 								<label for="para">Para</label>
-								<input type="text" class="form-control" id="para" placeholder="joao@dominio.com.br">
+								<input name="emailAddress" type="email" class="form-control" id="para" placeholder="joao@dominio.com.br" required>
 							</div>
 
 							<div class="form-group">
 								<label for="assunto">Assunto</label>
-								<input type="text" class="form-control" id="assunto" placeholder="Assundo do e-mail">
+								<input name="subject" type="text" class="form-control" id="assunto" placeholder="Assundo do e-mail" required>
 							</div>
 
 							<div class="form-group">
 								<label for="mensagem">Mensagem</label>
-								<textarea class="form-control" id="mensagem"></textarea>
+								<textarea name="message" class="form-control" id="mensagem" required></textarea>
 							</div>
 
 							<button type="submit" class="btn btn-primary btn-lg">
